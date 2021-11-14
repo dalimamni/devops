@@ -23,7 +23,7 @@ public class Entreprise implements Serializable{
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int id;
+	private long id;
 	
 	private String name;
 	
@@ -44,7 +44,7 @@ public class Entreprise implements Serializable{
 		this.raisonSocial = raisonSocial;
 	}
 
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 
@@ -82,7 +82,12 @@ public class Entreprise implements Serializable{
 		this.departements.add(departement);
 	}
 
-
+	public Entreprise(long id, String name, String raisonSocial) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.raisonSocial = raisonSocial;
+	}
 
 
 }
